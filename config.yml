@@ -5,9 +5,8 @@
 
  jobs:
    build:
-    build-windows:
-     executor: win/vs2019
-     executor: win/default     
+    docker:
+      - image: microsoft/aspnetcore-build:2.0    
     
      steps:
        - checkout
