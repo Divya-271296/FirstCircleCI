@@ -5,6 +5,8 @@
 
  jobs:
    build:
+    docker:
+        -image: mcr.microsoft.com/dotnet/core/sdk:2.2
      executor: win/default     
     
      steps:
@@ -12,3 +14,7 @@
        - run: dotnet restore 
        - run: dotnet build
        - run: dotnet run
+
+
+
+
