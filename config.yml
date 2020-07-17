@@ -5,10 +5,13 @@
 
  jobs:
    build:
+    build-windows:
+     executor: win/vs2019
      executor: win/default     
     
      steps:
        - checkout
+       - run: dotnet restore
        - run: dotnet build
 
 
